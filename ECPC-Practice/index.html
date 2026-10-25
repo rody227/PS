@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ECPC Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open problem list" aria-expanded="false">☰</button>
+    <div class="brand">ECPC Practice</div>
+    <div class="stats" aria-live="polite">
+      <span>Total <b id="stTotal">0</b></span>
+      <span class="s-solved">Solved <b id="stSolved">0</b></span>
+      <span class="s-remaining">Remaining <b id="stRemaining">0</b></span>
+    </div>
+    <div class="spacer"></div>
+    <input class="search" id="search" type="search" placeholder="Search title, letter or number" aria-label="Search problems" autocomplete="off">
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to dark theme">Dark</button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Problem list">
+      <div class="summary" id="summary"></div>
+      <div class="filters" id="filters" role="group" aria-label="Filter by status">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">All Problems</button>
+        <button class="chip" type="button" data-f="todo" aria-pressed="false">Not Started</button>
+        <button class="chip" type="button" data-f="attempted" aria-pressed="false">Attempted</button>
+        <button class="chip" type="button" data-f="solved" aria-pressed="false">Solved</button>
+      </div>
+      <ul class="plist" id="plist"></ul>
+    </aside>
+
+    <main class="main" id="main" tabindex="-1">
+      <noscript><div class="card">This practice site needs JavaScript enabled.</div></noscript>
+    </main>
+  </div>
+
+  <script src="problems.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
